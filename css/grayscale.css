@@ -131,10 +131,10 @@ a:focus {
   color: white;
   background: url(../img/missing_2.png) no-repeat center scroll;
   background-color: #252526;
-  -webkit-background-size: 900px auto;
-  -moz-background-size: 900px auto;
-  background-size: 900px auto;
-  -o-background-size: 900px auto;
+  -webkit-background-size: 800px auto;
+  -moz-background-size: 800px auto;
+  background-size: 800px auto;
+  -o-background-size: 800px auto;
 }
 .intro .intro-body {
   display: table-cell;
