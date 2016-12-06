@@ -112,18 +112,17 @@ function writeData(link, created, issues, total, needed, date, threshold, respon
         }
         $("#issues").append(issue);
     }
-    
-    $("#remaining-signatures").html(needed);
-    $("#response-deadline").html(date);
-    $("#response-threshold").html(threshold);
     $("#total-sig").html(total);
     $("#new-sig").html(total);
     $("#nahee-total").html(total);
+    $("#remaining-signatures").html(needed);
+    $("#response-deadline").html(date);
+    $("#response-threshold").html(threshold);
+    
     if (responseurl) {
         $("#response-link").html(responselink);
     }
 }
-console.log("nahee");
 /*
  * Assigns variables to all of the data returned by JSONP then calls write and
  * animation functions.
