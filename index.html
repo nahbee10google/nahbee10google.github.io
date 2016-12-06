@@ -83,9 +83,11 @@
         <div class="intro-body">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-1 col-xs-8 col-xs-offset-1">
+                    <div class="col-md-6 col-md-offset-1 col-xs-6 col-xs-offset-1">
                         <p style="color:#ffffff;text-align:left;">서명인원 <span id="new-sig"></span><br>남은인원 <span id="remaining-signatures"></span></p>
-                        
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <p id="d_counter" style="text-align:right;"></p>
                     </div>
                 </div>
                 <div class="row" style="margin-bottom:10px;">
@@ -256,6 +258,16 @@ And please let us know if there has been any threat on Cho's safety,or request b
         });
       });
     </script>
+    <script language="JavaScript">
+<!--
+var now = new Date();
+var then = new Date("january 4,2017"); // 크리스마스 
+var gap = then.getTime() - now.getTime();
+gap = Math.floor(gap / (1000 * 60 * 60 * 24));
+document.getElementById('d_counter').innerHTML="D-day "+gap;
+console.log("크리스마스 : " + gap + " day left");
+// -->
+</script>
 
 </body>
 
