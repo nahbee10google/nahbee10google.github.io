@@ -22,6 +22,10 @@
     <!-- Theme CSS -->
     <link href="css/grayscale.css" rel="stylesheet">
 
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/date.format.js"></script>
+    <script type="text/javascript" src="js/thermometer.js"></script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -78,7 +82,13 @@
     <header class="intro" style="background-color:#252526">
         <div class="intro-body">
             <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-1 col-xs-8 col-xs-offset-1">
+                        <p style="color:#ffffff;text-align:left;">현재까지 <span id="new-sig"></span>명이 서명해주셨습니다.</p>
+                    </div>
+                </div>
                 <div class="row" style="margin-bottom:10px;">
+
                     <div class="col-md-8 col-md-offset-1 col-xs-8 col-xs-offset-1">
                         <div style="float:left;font-size:40px;margin-bottom:10px;">
                             <a href="https://www.facebook.com/sharer/sharer.php?u=nahbee10google.github.io" style="" target="_blank">
@@ -232,6 +242,18 @@ And please let us know if there has been any threat on Cho's safety,or request b
 
     <!-- Theme JavaScript -->
     <script src="js/grayscale.js"></script>
+        <script type="text/javascript">
+      $(function() {
+        $.ajax({
+          url: 'https://api.whitehouse.gov/v1/petitions/2422616.json',
+          type: "GET",
+          dataType: 'json',
+          success: function(data) {
+            petitionData(data);
+          }
+        });
+      });
+    </script>
 
 </body>
 
