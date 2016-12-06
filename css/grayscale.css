@@ -151,7 +151,14 @@ a:focus {
   font-size:22px; color:#42DCA3; text-indent:20px;
 }
 
+#top_title{
+  font-size: 14px;
+}
+
 @media (min-width: 768px) {
+  #top_title{
+    font-size: 18px;
+  }
   .b_quote_p{
     font-size:32px; color:#42DCA3; text-indent:20px;
   }
