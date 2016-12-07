@@ -24,8 +24,8 @@
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <!--<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">-->
 
     <!-- Theme CSS -->
     <link href="css/grayscale.css" rel="stylesheet">
@@ -33,6 +33,7 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="js/date.format.js"></script>
     <script type="text/javascript" src="js/thermometer.js"></script>
+    <script src="http://developers.kakao.com/sdk/js/kakao.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -109,6 +110,9 @@
                             <a href="https://twitter.com/intent/tweet?text=http://7missinghours.com/"
                               style="">
                                 <i class="fa fa-twitter"></i>
+                            </a>
+                            <a id="kakao-link-btn" href="javascript:;" style="width:45px;margin-left:17px;">
+                            <img src="http://dev.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" style="width:45px;padding-bottom:5px;"/>
                             </a>
                             
                         </div>
@@ -224,6 +228,12 @@ And please let us know if there has been any threat on Cho's safety,or request b
                             <i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span>
                         </a>
                     </li>
+                    <li>
+                        <a id="kakao-link-btn" href="javascript:;" data-size="large" class="btn btn-default btn-lg" >
+                            <i class="fa fa-comment fa-fw"></i> <span class="network-name">Kakao</span>
+                            <!--<img src="http://dev.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" style="width:45px;padding-bottom:5px;"/>-->
+                        </a>
+                    </li>
                 </ul>
                 <!--<ul class="list-inline banner-social-buttons">
                     <li>
@@ -276,15 +286,35 @@ And please let us know if there has been any threat on Cho's safety,or request b
       });
     </script>
     <script language="JavaScript">
-<!--
-var now = new Date();
-var then = new Date("january 4,2017"); // 크리스마스 
-var gap = then.getTime() - now.getTime();
-gap = Math.floor(gap / (1000 * 60 * 60 * 24));
-document.getElementById('d_counter').innerHTML="D-day "+gap;
-console.log("크리스마스 : " + gap + " day left");
-// -->
-</script>
+        <!--
+        var now = new Date();
+        var then = new Date("january 4,2017"); // 크리스마스 
+        var gap = then.getTime() - now.getTime();
+        gap = Math.floor(gap / (1000 * 60 * 60 * 24));
+        document.getElementById('d_counter').innerHTML="D-day "+gap;
+        console.log("마감 : " + gap + " day left");
+        // -->
+    </script>
+    <script type='text/javascript'>
+      //<![CDATA[
+        // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+        Kakao.init('a456bf43543ceb7030a22038d96f90fb');
+        // // 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+        Kakao.Link.createTalkLinkButton({
+          container: '#kakao-link-btn',
+          label: '7missinghours.',
+          image: {
+            src: 'http://dn.api1.kage.kakao.co.kr/14/dn/btqaWmFftyx/tBbQPH764Maw2R6IBhXd6K/o.jpg',
+            width: '200',
+            height: '200'
+          },
+          webButton: {
+            text: '7missinghours',
+            url: 'http://7missinghours.com' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
+          }
+        });
+      //]]>
+    </script>
 
 </body>
 
