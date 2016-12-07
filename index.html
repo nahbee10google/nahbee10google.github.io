@@ -229,7 +229,7 @@ And please let us know if there has been any threat on Cho's safety,or request b
                         </a>
                     </li>
                     <li>
-                        <a id="kakao-link-btn" href="javascript:;" data-size="large" class="btn btn-default btn-lg" >
+                        <a id="kakao-link-btn2" href="javascript:;" data-size="large" class="btn btn-default btn-lg" >
                             <i class="fa fa-comment fa-fw"></i> <span class="network-name">Kakao</span>
                             <!--<img src="http://dev.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" style="width:45px;padding-bottom:5px;"/>-->
                         </a>
@@ -302,6 +302,19 @@ And please let us know if there has been any threat on Cho's safety,or request b
         // // 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
         Kakao.Link.createTalkLinkButton({
           container: '#kakao-link-btn',
+          label: '7missinghours.',
+          image: {
+            src: 'http://dn.api1.kage.kakao.co.kr/14/dn/btqaWmFftyx/tBbQPH764Maw2R6IBhXd6K/o.jpg',
+            width: '200',
+            height: '200'
+          },
+          webButton: {
+            text: '7missinghours',
+            url: 'http://7missinghours.com' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
+          }
+        });
+        Kakao.Link.createTalkLinkButton({
+          container: '#kakao-link-btn2',
           label: '7missinghours.',
           image: {
             src: 'http://dn.api1.kage.kakao.co.kr/14/dn/btqaWmFftyx/tBbQPH764Maw2R6IBhXd6K/o.jpg',
